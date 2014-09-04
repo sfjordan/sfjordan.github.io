@@ -1,0 +1,20 @@
+.logo {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    background: url('http://lh5.googleusercontent.com/-Hgnz1qTwCF8/AAAAAAAAAAI/AAAAAAAAAAA/QofjsfhTXN8/s70-c-k/photo.jpg') no-repeat;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+.runner {
+    background-color:#CCC;
+    position: absolute;
+    top: 96px;
+    left: 43px;
+    width: 4px;
+    bottom: 160px;
+}
