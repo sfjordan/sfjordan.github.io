@@ -18,3 +18,16 @@
     width: 4px;
     bottom: 160px;
 }
+
+body {
+    padding-left:150px;
+    padding-bottom:100px;
+    position:absolute;
+    width:700px;
+    top:0;
+    font-family: 'Open Sans',sans-serif;
+}
+
+.content-wrapper {
+    padding-top: 50px;
+}
