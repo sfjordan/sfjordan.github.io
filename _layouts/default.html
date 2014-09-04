@@ -2,9 +2,12 @@
 <html>
     <body>
         {% include head.html %}
-        
-        <div class="content-wrapper">
-            {{ content }}
+        <div class="container">
+            <div class="row-fluid">
+                <div class="content-wrapper" style="width:80%">
+                    {{ content }}
+                </div>
+            </div>
         </div>
 
         {% include foot.html %}
