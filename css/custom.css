@@ -1,10 +1,10 @@
 .logo {
-    width: 70px;
-    height: 70px;
-    border-radius: 35px;
-    -webkit-border-radius: 35px;
-    -moz-border-radius: 35px;
-    background: url('http://lh5.googleusercontent.com/-Hgnz1qTwCF8/AAAAAAAAAAI/AAAAAAAAAAA/QofjsfhTXN8/s70-c-k/photo.jpg') no-repeat;
+    width: 100px;
+    height: 100px;
+    border-radius: 39px;
+    -webkit-border-radius: 39px;
+    -moz-border-radius: 39px;
+    background: url('../static/img/sfj_profile.png') no-repeat;
     position: absolute;
     left: 10px;
     top: 10px;
@@ -13,9 +13,9 @@
 .runner {
     background-color:#CCC;
     position: absolute;
-    top: 96px;
-    left: 43px;
-    width: 4px;
+    top: 120px;
+    left: 58px;
+    width: 5px;
     bottom: 160px;
 }
 
@@ -28,6 +28,3 @@ body {
     font-family: 'Open Sans',sans-serif;
 }
 
-.content-wrapper {
-    padding-top: 50px;
-}
