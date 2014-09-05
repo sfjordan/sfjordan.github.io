@@ -11,12 +11,15 @@
 }
 
 .runner {
-    background-color:#CCC;
     position: absolute;
     top: 120px;
     left: 58px;
     width: 5px;
     bottom: 160px;
+    /*height: 50%;*/
+    /*height: -moz-calc(100% - 80px);
+    height: -webkit-calc(100% - 80px);
+    height: calc(100% - 350px);*/
     background: -webkit-linear-gradient(#B8B8B8, #CCC, #FFF); /* For Safari 5.1 to 6.0 */
     background: -o-linear-gradient(#B8B8B8, #CCC, #FFF); /* For Opera 11.1 to 12.0 */
     background: -moz-linear-gradient(#B8B8B8, #CCC, #FFF); /* For Firefox 3.6 to 15 */
@@ -31,8 +34,7 @@ footer {
 body {
     padding-left:85px;
     padding-bottom:100px;
-    position:absolute;
-    width:700px;
+    /*width:700px;*/
     top:0;
     font-family: 'Open Sans',sans-serif;
     font-size: 16px;
@@ -53,6 +55,10 @@ h1 {
 
 .post-list li {
     padding-left: 50px;
+}
+
+.projects ul {
+    list-style-type: none;
 }
 
 a {
