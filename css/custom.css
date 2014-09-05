@@ -65,11 +65,15 @@ body {
     color: #808080;
 }
 
+.project .project-header {
+    font-family: Arimo, sans-serif;
+}
+
 .projects a {
     color: #000;
     text-decoration:none;
     border-bottom: 1px solid #CCC;
-    font-family: 
+    font-family: Arimo, sans-serif;
 }
 
 .projects a:hover {
