@@ -4,14 +4,14 @@ title: Projects
 ---
 
 <div class="projects">
-  <h2 class="page-heading">Projects</h2>
+  <h2 class="page-heading">Projects:</h2>
   <ul class="post-list">
     {% for post in site.posts %}
       <li>
         <h3>
           <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
         </h3>
-        <span class="post-meta">{{ post.description }}</span>
+        <span class="post-meta"><small>{{ post.description }}</small></span>
       </li>
     {% endfor %}
   </ul>

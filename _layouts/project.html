@@ -1,16 +1,16 @@
-<html>
-    <body>
-        {% include head.html %}
-        <div class="container">
-            <div class="row-fluid">
-                <div class="span10">
-                    <div class="content-wrapper col-xs-7 col-sm-8 col-md-9 col-lg-10">
-                        {{ content }}
-                    </div>
-                </div>
-            </div>
-        </div>
+---
+layout: default
+---
+<div class="project">
+    <header class="project-header">
+        <center><u>
+            <h2 class="project-title">{{ page.title }}</h2>
+        </center></u>
+        <br/>
+    </header>
 
-        {% include foot.html %}
-    </body>
-</html>
+    <article class="project-content">
+        {{ content }}
+    </article>
+    <div class="text-muted"><small>{{ page.date | date: "%B %Y" }}</small></div>
+</div>
