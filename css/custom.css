@@ -41,6 +41,10 @@ body {
     font-size: 16px;
 }
 
+.topimg {
+  width: 100%;
+}
+
 .content-wrapper {
     padding-top: 100px;
 }
