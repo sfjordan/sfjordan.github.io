@@ -5,7 +5,7 @@ description: A script to check and print your wireless connection's quality, col
 date: 2014-7-15
 ---
 <div class="col-md-6">
-    <img class="topimg" src="/static/img/NetworkTestSC.png" alt="NetworkTest"/>
+    <img class="topimg" src="{{ site.url }}/static/img/NetworkTestSC.png" alt="NetworkTest"/>
 </div>
 <p>
     I was sitting in a cafe in London, just outside Leicester Square, waiting around until the movie I'd bought tickets for later that afternoon. I pulled out my laptop and connected to their wifi, with the intention of killing some time just surfing the web. Unfortunately, their wireless network sucked. I began wondering just how slow it really was, so I tried running a <a href="http://www.speedtest.net/">speedtest</a>. Their wifi was so slow, however, the speedtest site just wouldn't load. The fancy animations and javascript libraries were making the rest of the site unusable on such a low-quality connection. I thought to myself, 'Why do I need these animations? I'm just here for one thing...'. So, I started looking for a speedtest script I could just run from the terminal, no GUI necessary. Looking around led me to <a href="https://github.com/sivel/speedtest-cli">this</a> script, a neat little bit of Python that would do all the actual testing for me. When I ran it, however, I found it a little lacking. It wouldn't tell you the percentage packet loss of your connection, or if your wireless wasn't actually connected to the Internet. Hey, I thought. That's probably something I can add.
