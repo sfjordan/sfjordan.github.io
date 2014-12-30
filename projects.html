@@ -5,7 +5,7 @@ title: Projects
 
 <div class="projects">
   <h2 class="page-heading">Projects:</h2>
-  <ul class="post-list">
+  <ul class="post-list hidden-xs">
     {% for post in site.posts %}
       <li>
         <h3>
@@ -15,4 +15,13 @@ title: Projects
       </li>
     {% endfor %}
   </ul>
+  <div class="visible-xs"> 
+    <!-- so it fits better on small screens, no indent -->
+    {% for post in site.posts %}
+      <h3>
+        <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h3>
+      <span class="post-meta"><small>{{ post.description }}</small></span>
+    {% endfor %}
+  </div>
 </div>
