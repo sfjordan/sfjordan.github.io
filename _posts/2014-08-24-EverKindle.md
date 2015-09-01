@@ -5,7 +5,7 @@ description: A script to convert notes from Evernote to Kindle.
 date: 2014-8-24
 ---
 <div class="col-md-6">
-    <img class="topimg" src="{{ site.url }}/static/img/EverKindleSC.png" alt="EverKindle"/>
+    <img class="topimg" src="/static/img/EverKindleSC.png" alt="EverKindle"/>
 </div>
 <p>
     Like most of my projects, this one came about because I wanted my computer to do something which it unfortunately wouldn't do without a little help. In this case, I wrote my notes in a program called <a href="https://evernote.com/">Evernote</a>. I also have a Kindle; and while I must admit I was initially skeptical of e-readers in general (the tactile, physical experience of reading is still something I put quite a lot of value in) the Kindle does a great job of adding so much utility in other areas that I have become quite happily a convert.
