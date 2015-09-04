@@ -2,7 +2,7 @@
 layout: project
 title: NetworkTest
 description: A script to check and print your wireless connection's quality, color-coded.
-date: 2014-7-15
+date: 2014-07-15
 ---
 <div class="col-md-6">
     <img class="topimg" src="/static/img/NetworkTestSC.png" alt="NetworkTest"/>

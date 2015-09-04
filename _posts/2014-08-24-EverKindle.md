@@ -2,7 +2,7 @@
 layout: project
 title: EverKindle
 description: A script to convert notes from Evernote to Kindle.
-date: 2014-8-24
+date: 2014-08-24
 ---
 <div class="col-md-6">
     <img class="topimg" src="/static/img/EverKindleSC.png" alt="EverKindle"/>

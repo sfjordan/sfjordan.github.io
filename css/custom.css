@@ -39,8 +39,21 @@ body {
 }
 
 .topimg {
-  width: 100%;
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: block;
   max-width: 600px;
+  max-height: 800px;
+}
+
+.midimg {
+  width: auto;
+  height: auto;
+  margin: auto;
+  display: block;
+  max-width: 600px;
+  max-height: 400px;
 }
 
 .content-wrapper {
