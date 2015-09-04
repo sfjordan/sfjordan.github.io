@@ -6,7 +6,7 @@ date: 2015-07-30
 ---
 
 <div class="col-md-6">
-    <img class="topimg" src="/static/img/ShakeSlack.gif" alt="ShakeSlack" style="width:500px;height:333px;"/>
+    <img class="topimg" src="/static/img/ShakeSlack.gif" alt="ShakeSlack" />
 </div>
 
 <p>
