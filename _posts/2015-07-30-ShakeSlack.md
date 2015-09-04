@@ -1,0 +1,32 @@
+---
+layout: project
+title: ShakeSlack
+description: A computer vision hamburger alert system.
+date: 2015-07-30
+---
+
+<div class="col-md-6">
+    <img class="topimg" src="/static/img/ShakeSlack.gif" alt="ShakeSlack" style="width:500px;height:333px;"/>
+</div>
+
+<p>
+    While I interned at AppNexus this summer, I took part in an internal hackathon for interns and recent campus hires. It was a lot of fun, and a great break from the normal schedule of daily development. I got to work with several other interns for eight hours on a quick little project, which focused on solving the age-old problem: I want a burger, but I don't want to wait very long.
+</p>
+<p>
+    Shakeshack is a popular burger joint, with a couple of establishments accross New York city. There is one in the prime position of Madison Park, right next to AppNexus' New York office space. Unfortunately, being in such a good position means lots of foot traffic, and long lines. By noon on most sunny days, the line quickly grows to 45 minutes to an hour wait for tasty shakeshack food. Luckily, the management were kind enough to add a <a href="https://www.shakeshack.com/camera.jpg">webcam</a> to the top of the restaurant, pointed at the line and refreshing every couple of seconds. You can now go check the webcam, and when the line looks short go and get your food. But who wants to go through the painstaking process of refreshing the image and looking at it yourself? What a waste of your precious time!
+</p>
+<p>
+    Enter some talented AppNexus interns, 8 hours of development time, and some great technologies like <a href="https://slack.com/">Slack</a>, <a href="https://nodejs.org/en/">Node.js</a>, and <a href="http://opencv.org/">OpenCV</a>. Slack is a messaging programs for teams, with a great RTM (real-time messaging) API and good support for bot users. OpenCV is a computer vision platform from Intel. AppNexus uses Slack for its internal IM needs, so what our caffine and pizza-fueled efforts of the hackathon focused on were combining these tools into one cohesive platform.
+</p>
+<p>
+    The rough design of the project is as follows: a user would message the slack bot with various natural-language questions. The bot interacts with the user, either answering their questions immediately (when the question is an immediate one like 'how long is the line right now?' or 'Is it sunny outside?'). These are both accomplished by hitting various API endpoints, either Yahoo weather or our own Node.js server which is constantly pulling images from the webcam and running our computer vision algorithm to estimate the line length at shakeshack. However, the user can also specify a more long-term question, such as 'let me know when the line is 15 minutes long'. In order to accomplish this, the slack bot has a Postgres table that it can interact with to store users who have requested later replies. Every couple of seconds, the slack bot will contact the Node.js server to find out the current line length; then, it cycles through all the users it has stores and contacts them if the line length is below their requested limit. Of course, no one cares if the line is short at 8pm at night - the slack bot limits its replies to 11am and 2pm EST, so as to not innundate users with needless replies. This actually turns out to be annoyingly complex, since Python's <code>datetime</code> object is not natively timezone-aware, and we were running the bot on a dev box whose clock was set to UTC rather than EST. Luckily, as usual there's a great python package (<a href="https://pypi.python.org/pypi/pytz/">pytz</a>) already written to deal with this complexity. On the server side, the Node.js server itself saves the image from the webcam image every few seconds, and bundles a group of them into a packet which gets analyzed by our hand-rolled computer vision algorithm.
+</p>
+<p>
+    The computer vision algorithm we created takes a couple of images close together and does a mixture of background removal, outline detection, and color manipulation to find the line in the image (see the gif at the top of this post as a demonstration). This actually took a lot of tweaking to get right - the line doesn't always go the same direction (sometimes it goes straight back and sometimes it curves around to the right). Another issue was that, due to the angle of the camera looking down on the line, the prepackaged tools in OpenCV for recognizing a human outline had high error rates; they expected an outline straight-on, not from a high angle far away. After a couple of iterations, however, we had a reasonably effective group of techniques to estimage the line length (outlined in red in the gif above), which could simply be served as an integer on an API endpoint whenever the slack bot requested it.
+</p>
+<p>
+    Don't let me give you the impression that we didn't have our fair share of crises, though. We had a huge range of unexpected issues throughout the day, and last-minute errors appeared with typical hackathon regularity. For example, my work laptop crashed roughly 30 minutes into the hackathon, and I couldn't get it to work at all. I had to switch to my personal laptop (which didn't have a recognized RSA key to ssh into my dev box) for googling and pair programming for actual work. This was pretty annoying, since I was the team lead for the slack bot efforts and could have worked much quicker if it hadn't happened. Also, the dev box we were planning to deploy our Node.js server on had very restrictive permissions which we only discovered 15 minutes before the deadline. So, with barely 10 minutes to go, we had nothing working. Luckily some quick thinking and rapid work during the opening of the demos let us end up with an incredibly last-minute save and a great on-stage demo (seriously, everything in our demo worked flawlessly and the final word of our presentation was spoken exactly on cue with the times-up bell).
+</p>
+<p>
+    Overall, though, it was a hugely enjoyable experience. Our team worked well together, both at the beginning of the day when everyone was calm as well as during the last-minute failure panic. Our division of labor was great, with team members assigned to the areas that they had the most experience and could work the quickest. We ended up getting runner-up in the competition, which I felt was undervalued but admittedly the winning project was pretty cool as well. In the end, it was probably the most memorable hackathon experience I've ever had.
+</p>

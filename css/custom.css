@@ -39,12 +39,12 @@ body {
 }
 
 .topimg {
-  width: auto;
+  width: 100%;
   height: auto;
   margin: auto;
   display: block;
-  max-width: 600px;
-  max-height: 800px;
+  max-width: 500px;
+  max-height: 900px;
 }
 
 .midimg {
