@@ -48,7 +48,7 @@ body {
 }
 
 .midimg {
-  width: auto;
+  width: 100%;
   height: auto;
   margin: auto;
   display: block;
